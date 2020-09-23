@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/addCity_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Ekle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/city_edt"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/city_edt"
+        app:layout_constraintTop_toBottomOf="@+id/city_edt"
+        app:layout_constraintVertical_bias="0.012" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/distributionList"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/cityList"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/cityList"
+        app:layout_constraintTop_toTopOf="@+id/cityList" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/cityList"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/nameList"
+        app:layout_constraintStart_toEndOf="@+id/nameList"
+        app:layout_constraintTop_toTopOf="@+id/nameList" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/nameList"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/personName_edt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="Name"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/nameList"
+        app:layout_constraintStart_toStartOf="@+id/nameList"
+        app:layout_constraintTop_toBottomOf="@+id/nameList" />
+
+    <Button
+        android:id="@+id/addName_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Ekle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/personName_edt"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/personName_edt"
+        app:layout_constraintTop_toBottomOf="@+id/personName_edt"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/city_edt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="Şehir"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/cityList"
+        app:layout_constraintStart_toStartOf="@+id/cityList"
+        app:layout_constraintTop_toBottomOf="@+id/cityList" />
+
+    <Button
+        android:id="@+id/distribute_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Dağıt"
+        app:layout_constraintEnd_toEndOf="@+id/distributionList"
+        app:layout_constraintStart_toStartOf="@+id/distributionList"
+        app:layout_constraintTop_toBottomOf="@+id/distributionList" />
+
+    <Button
+        android:id="@+id/delete_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Temizle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/distribute_btn"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/distribute_btn"
+        app:layout_constraintTop_toBottomOf="@+id/distribute_btn"
+        app:layout_constraintVertical_bias="0.037" />
+</androidx.constraintlayout.widget.ConstraintLayout>
